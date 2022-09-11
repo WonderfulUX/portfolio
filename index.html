@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boris Boulogne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cutive+Mono&family=NTR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <span class="name">Boris Boulogne</span>
+        <button class="nav-btn">
+            <div class="nav-btn-lines-container">
+                <div class="btn-line top"></div>
+                <div class="btn-line middle"></div>
+                <div class="btn-line bottom"></div>
+            </div>
+        </button>
+    </header>
+    <h1 id="home">UX/UI Designer <br>Front-End Developer</h1>
+    <nav class="menu">
+        <ul class="menu-links">
+            <li class="menu-link">Work</li>
+            <li class="menu-link">Skillset</li>
+            <li class="menu-link">About</li>
+            <li class="menu-link">Contact</li>
+        </ul>
+    </nav>
+    <main>
+        <section id="work" class="content">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <div class="carousel-img-container">
+                        <div class="see-pj veggie-burger"><a class="see-pj-link">See project</a></div>
+                        <img src="/img/veggie-burger.png" alt="veggie burger template" class="carousel-img img1">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-img-container">
+                        <div class="see-pj komes"><a class="see-pj-link">See project</a></div>
+                        <img src="/img/landingpage.png" alt="landing page komès" class="carousel-img img2">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-img-container">
+                        <div class="see-pj thespot"><a class="see-pj-link">See project</a></div>
+                        <img src="/img/thespot.png" alt="the spot template" class="carousel-img img3">
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="carousel-img-container">
+                        <div class="see-pj caisses"><a class="see-pj-link">See project</a></div>
+                        <img src="/img/caisses.png" alt="caisses komès" class="carousel-img img4">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-control">
+                <span class="slide-number">1</span><span class="dash">-</span> <span class="slide-name"> Veggie Burger</span>
+                <hr>
+                <button class="previous" disabled>Previous</button><button class="next">Next</button>
+            </div>
+        </section>
+        <section id="skillset" class="content">
+            <div class="skillset-block green">
+                <h2 class="skillset-title">Tools I use</h2>
+                <ul class="skillset-content">
+                    <li class="skill">Figma</li>
+                    <li class="skill">Zeplin</li>
+                    <li class="skill">VS Code</li>
+                    <li class="skill">Gitlab</li>
+                </ul>
+            </div>
+            <div class="skillset-block grey">
+                <h2 class="skillset-title">Tools I used</h2>
+                <ul class="skillset-content">
+                    <li class="skill">Sketch</li>
+                    <li class="skill">Principles</li>
+                    <li class="skill">Invision / Invision studio</li>
+                    <li class="skill">Adobe Photoshop</li>
+                    <li class="skill">Adobe XD</li>
+                    <li class="skill">Bootstrap</li>
+                </ul>
+            </div>
+            <div class="skillset-block purple">
+                <h2 class="skillset-title">What I know</h2>
+                <ul class="skillset-content">
+                    <li class="skill">HTML5</li>
+                    <li class="skill">CSS3</li>
+                    <li class="skill">SASS</li>
+                    <li class="skill">Vanilla JS</li>
+                    <li class="skill">GIT</li>
+                    <li class="skill">PHP (still learning)</li>
+                </ul>
+            </div>
+            <div class="skillset-block orange">
+                <h2 class="skillset-title">In progress</h2>
+                <ul class="skillset-content">
+                    <li class="skill">PHP</li>
+                    <li class="skill">React</li>
+                    <li class="skill">PWAs</li>
+                </ul>
+            </div>
+        </section>
+        <section id="about" class="content">
+            <div class="about-block">
+                <h2 class="about-title">Background</h2>
+                <p class="about-content">I'm a former Telecommunication Engineer, I also work as a bartender and a bilingual support analyst before getting into UX/UI Design. 
+                    I was born in the caribbean, in a French island called <a href="https://www.google.com/maps/place/Guadeloupe/@16.1488972,-61.957529,9z/data=!3m1!4b1!4m5!3m4!1s0x8c0e755a77287d51:0xecbe3e37b74a07ab!8m2!3d16.265!4d-61.551" target="_blank" style="color: var(--link-blue)">Guadeloupe</a>, and I got to travel and live in France, England, Australia, and Canada.</p>
+            </div>
+            <div class="about-block">
+                <h2 class="about-title">How did I get to UX/UI design ?</h2>
+                <p class="about-content">After coming back to France from Australia, I wanted to try something different, bring meaning to what I'm doing, and UX Design was the perfect candidate to fulfill my expectations. This field requires creativity, precision, challenge, the ability to learn and grow from others, everything that I want in a job.</p>
+            </div>
+            <div class="about-block">
+                <h2 class="about-title">Multi-potential</h2>
+                <p class="about-content">Front-End development has become an obvious way to sharpen my skillset. Bringing any mockup to life is not very common to most designers, and on the other side most developers lack basic UX principles. I'm coming to you as a developer with a UX perspective, paying attention to details and eventually adding value to your website's user experience.</p>
+            </div>
+        </section>
+        <section id="contact" class="content">
+            <p class="top-contact-message">HEY ! You might be here for a reason, don't miss out... let's get creative together</p>
+            <ul class="contact-links">
+                <li class="contact-link"><img src="/icons/linkedIn-icon.svg" alt="linkedIn" class="icon"><a href="https://www.linkedin.com/in/boris-boulogne-60225572/" class="link">Reach out to me on LinkedIn</a></li>
+                <li class="contact-link"><img src="/icons/email-icon.svg" alt="gmail" class="icon"><a href="mailto:boulogneboris@gmail.com" class="link">Send me an email at boris.boulogne@gmail.com</a></li>
+                <li class="contact-link"><img src="/icons/phone-icon.svg" alt="phone" class="icon"><a href="tel:+3363734289" class="link">Give me call +33637334289</a></li>
+            </ul>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
