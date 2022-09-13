@@ -183,7 +183,7 @@ h1{
 /* ********* MAIN ******** */
 
 body{
-    background-image: url(/img/bodyBG.jpg);
+    background-image: url("./img/bodyBG.jpg");
     background-position: center left -40px;
     width: 100%;
     height: 100vh;
