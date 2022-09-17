@@ -7,7 +7,7 @@
     <title>Boris Boulogne</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cutive+Mono&family=NTR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cutive+Mono&family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
     <link rel="icon" type="image/png" href="./favicon/favicon.png">
@@ -23,39 +23,68 @@
             </div>
         </button>
     </header>
+    <div class="switchLanguage w-screen">
+        <button class="active switchFr" onclick="switchLang(event)">fr</button>
+        <button onclick="switchLang(event)" class="switchEn">en</button>
+    </div>
     <h1 id="home">UX/UI Designer <br>Front-End Developer</h1>
     <nav class="menu">
         <ul class="menu-links">
-            <li class="menu-link">Work</li>
-            <li class="menu-link">Skillset</li>
-            <li class="menu-link">About</li>
+            <li class="menu-link">
+                <span class="fr">Projets</span>
+                <span class="en dn">Work</span>
+            </li>
+            <li class="menu-link">
+                <span class="fr">Compétences</span>
+                <span class="en dn">Skillset</span>
+            </li>
+            <li class="menu-link">
+                <span class="fr">À propos</span>
+                <span class="en dn">About</span>
+            </li>
             <li class="menu-link">Contact</li>
         </ul>
+        <div class="switchLanguage s-screen">
+            <button class="active switchFr" onclick="switchLang(event)">fr</button>
+            <button onclick="switchLang(event)" class="switchEn">en</button>
+        </div>
     </nav>
     <main>
         <section id="work" class="content">
             <div class="carousel-container">
                 <div class="carousel-slide">
                     <div class="carousel-img-container">
-                        <div class="see-pj veggie-burger"><a class="see-pj-link">See project</a></div>
+                        <div class="see-pj veggie-burger">
+                            <a class="see-pj-link fr" href="https://wonderfulux.github.io/veggieburger/" target="_blank">Voir le projet</a>
+                            <a class="see-pj-link en dn" href="https://wonderfulux.github.io/veggieburger/" target="_blank">See project</a>
+                        </div>
                         <img src="./img/veggie-burger.png" alt="veggie burger template" class="carousel-img img1">
                     </div>
                 </div>
                 <div class="carousel-slide">
                     <div class="carousel-img-container">
-                        <div class="see-pj komes"><a class="see-pj-link">See project</a></div>
+                        <div class="see-pj komes">
+                            <a class="see-pj-link fr" href="https://wonderfulux.github.io/landingpage/" target="_blank">Voir le projet</a>
+                            <a class="see-pj-link en dn" href="https://wonderfulux.github.io/landingpage/" target="_blank">See project</a>
+                        </div>
                         <img src="./img/landingpage.png" alt="landing page komès" class="carousel-img img2">
                     </div>
                 </div>
                 <div class="carousel-slide">
                     <div class="carousel-img-container">
-                        <div class="see-pj thespot"><a class="see-pj-link">See project</a></div>
+                        <div class="see-pj thespot">
+                            <a class="see-pj-link fr" href="https://wonderfulux.github.io/thespot/" target="_blank">Voir le projet</a>
+                            <a class="see-pj-link en dn" href="https://wonderfulux.github.io/thespot/" target="_blank">See project</a>
+                        </div>
                         <img src="./img/thespot.png" alt="the spot template" class="carousel-img img3">
                     </div>
                 </div>
                 <div class="carousel-slide">
                     <div class="carousel-img-container">
-                        <div class="see-pj caisses"><a class="see-pj-link">See project</a></div>
+                        <div class="see-pj caisses">
+                            <a class="see-pj-link fr" style="cursor: default;">En cours</a>
+                            <a class="see-pj-link en dn" style="cursor: default;">Available soon</a>
+                        </div>
                         <img src="./img/caisses.png" alt="caisses komès" class="carousel-img img4">
                     </div>
                 </div>
@@ -63,12 +92,22 @@
             <div class="carousel-control">
                 <span class="slide-number">1</span><span class="dash">-</span> <span class="slide-name"> Veggie Burger</span>
                 <hr>
-                <button class="previous" disabled>Previous</button><button class="next">Next</button>
+                <button class="previous" disabled>
+                    <span class="fr">Précédent</span>
+                    <span class="en dn">Previous</span>
+                </button>
+                <button class="next">
+                    <span class="fr">Suivant</span>
+                    <span class="en dn">Next</span>
+                </button>
             </div>
         </section>
         <section id="skillset" class="content">
             <div class="skillset-block green">
-                <h2 class="skillset-title">Tools I use</h2>
+                <h2 class="skillset-title">
+                    <span class="fr">J'utilise</span>
+                    <span class="en dn">Tools I use</span>
+                </h2>    
                 <ul class="skillset-content">
                     <li class="skill">Figma</li>
                     <li class="skill">Zeplin</li>
@@ -77,7 +116,10 @@
                 </ul>
             </div>
             <div class="skillset-block grey">
-                <h2 class="skillset-title">Tools I used</h2>
+                <h2 class="skillset-title">
+                    <span class="fr">J'ai utilisé</span>
+                    <span class="en dn">Tools I used</span>
+                </h2>
                 <ul class="skillset-content">
                     <li class="skill">Sketch</li>
                     <li class="skill">Principles</li>
@@ -88,7 +130,10 @@
                 </ul>
             </div>
             <div class="skillset-block purple">
-                <h2 class="skillset-title">What I know</h2>
+                <h2 class="skillset-title">
+                    <span class="fr">Je connais</span>
+                    <span class="en dn">What I know</span>
+                </h2>
                 <ul class="skillset-content">
                     <li class="skill">HTML5</li>
                     <li class="skill">CSS3</li>
@@ -99,7 +144,10 @@
                 </ul>
             </div>
             <div class="skillset-block orange">
-                <h2 class="skillset-title">In progress</h2>
+                <h2 class="skillset-title">
+                    <span class="fr">J'apprends</span>
+                    <span class="en dn">In progress</span>
+                </h2>
                 <ul class="skillset-content">
                     <li class="skill">PHP</li>
                     <li class="skill">React</li>
@@ -109,25 +157,49 @@
         </section>
         <section id="about" class="content">
             <div class="about-block">
-                <h2 class="about-title">Background</h2>
-                <p class="about-content">I'm a former Telecommunication Engineer, I also work as a bartender and a bilingual support analyst before getting into UX/UI Design. 
-                    I was born in the caribbean, in a French island called <a href="https://www.google.com/maps/place/Guadeloupe/@16.1488972,-61.957529,9z/data=!3m1!4b1!4m5!3m4!1s0x8c0e755a77287d51:0xecbe3e37b74a07ab!8m2!3d16.265!4d-61.551" target="_blank" style="color: var(--link-blue)">Guadeloupe</a>, and I got to travel and live in France, England, Australia, and Canada.</p>
+                <h2 class="about-title">
+                    <span class="fr">Cursus</span>
+                    <span class="en dn">Background</span>
+                </h2>
+                <p class="about-content">
+                    <span class="fr">Ancien Ingénieur en Telecoms, j'ai travaillé en tant que barman et assitant technique bilingue avant de me commencer l'UX/UI. 
+                        Je suis né et j'ai grandi en</span>
+                    <span class="en dn">I'm a former Telecommunication Engineer, I also work as a bartender and a bilingual support analyst before getting into UX/UI Design. 
+                        I was born in the caribbean, in a French island called</span> <a href="https://www.google.com/maps/place/Guadeloupe/@16.1488972,-61.957529,9z/data=!3m1!4b1!4m5!3m4!1s0x8c0e755a77287d51:0xecbe3e37b74a07ab!8m2!3d16.265!4d-61.551" target="_blank" style="color: var(--link-blue)">Guadeloupe</a>, 
+                        <span class="fr">et j'ai eu l'opportunité de vivre en Angleterre, en Australie et au Canada.</span>
+                        <span class="en dn">and I got to travel and live in France, England, Australia, and Canada.</span></p>
             </div>
             <div class="about-block">
-                <h2 class="about-title">How did I get to UX/UI design ?</h2>
-                <p class="about-content">After coming back to France from Australia, I wanted to try something different, bring meaning to what I'm doing, and UX Design was the perfect candidate to fulfill my expectations. This field requires creativity, precision, challenge, the ability to learn and grow from others, everything that I want in a job.</p>
+                <h2 class="about-title">
+                    <span class="fr">Comment j'ai commencé l'UX/UI design ?</span>
+                    <span class="en dn">How did I get to UX/UI design ?</span>
+                </h2>
+                <p class="about-content fr">Après mon voyage en Australie, j'ai souhaité trouvé une domaine qui pourrait me "driver", l'UX Design a été le parfait candidat pour répondre à mes attentes. Ce domaine implique à la fois créativiré, réflexion, précision, challenge, c'est un apprentissage constant, et c'est exactement ce à quoi j'aspirais.</p>
+                <p class="about-content en dn">After coming back to France from Australia, I wanted to try something different, bring meaning to what I'm doing, and UX Design was the perfect candidate to fulfill my expectations. This field requires creativity, precision, challenge, the ability to learn and grow from others, everything that I want in a job.</p>
             </div>
             <div class="about-block">
-                <h2 class="about-title">Multi-potential</h2>
-                <p class="about-content">Front-End development has become an obvious way to sharpen my skillset. Bringing any mockup to life is not very common to most designers, and on the other side most developers lack basic UX principles. I'm coming to you as a developer with a UX perspective, paying attention to details and eventually adding value to your website's user experience.</p>
+                <h2 class="about-title">
+                    <span class="fr">Multi-potentiel</span>
+                    <span class="en dn">Multi-potential</span>
+                </h2>
+                <p class="about-content fr">L'apprentissage de Front-End est la touche finale de l'UI. Pouvoir transcrire n'importe quelle maquette en page web au pixel près n'est pas donné à tous, et les purs developpeurs n'ont souvent pas de bases d'UX. Je me qualifierais d'UX développeur, portant attention aux details et apportant de la valeur ajoutée à l'expérience de vos utilisateurs.</p>
+                <p class="about-content en dn">Front-End development has become an obvious way to sharpen my skillset. Bringing any mockup to life is not very common to most designers, and on the other side most developers lack basic UX principles. I'm coming to you as a developer with a UX perspective, paying attention to details and eventually adding value to your website's user experience.</p>
             </div>
         </section>
         <section id="contact" class="content">
-            <p class="top-contact-message">HEY ! You might be here for a reason, don't miss out... let's get creative together</p>
+            <p class="top-contact-message fr">Vous n'êtes pas arrivez ici par hasard... Soyons créatifs ensemble </p>
+            <p class="top-contact-message en dn">HEY ! You might be here for a reason, don't miss out... let's get creative together</p>
             <ul class="contact-links">
-                <li class="contact-link"><img src="./icons/linkedIn-icon.svg" alt="linkedIn" class="icon"><a href="https://www.linkedin.com/in/boris-boulogne-60225572/" class="link">Reach out to me on LinkedIn</a></li>
-                <li class="contact-link"><img src="./icons/email-icon.svg" alt="gmail" class="icon"><a href="mailto:boulogneboris@gmail.com" class="link">Send me an email at boris.boulogne@gmail.com</a></li>
-                <li class="contact-link"><img src="./icons/phone-icon.svg" alt="phone" class="icon"><a href="tel:+3363734289" class="link">Give me call +33637334289</a></li>
+                <li class="contact-link"><img src="./icons/linkedIn-icon.svg" alt="linkedIn" class="icon"><a href="https://www.linkedin.com/in/boris-boulogne-60225572/" class="link">
+                    <span class="fr">Envoyez-moi un message sur</span>
+                    <span class="en dn">Send me an email at</span>
+                     LinkedIn</a></li>
+                <li class="contact-link"><img src="./icons/email-icon.svg" alt="gmail" class="icon"><a href="mailto:boris@uxdev.fr" class="link">
+                    <span class="fr">Écrivez moi à</span>
+                    <span class="en dn">Send me an email at</span> boris@uxdev.fr</a></li>
+                <li class="contact-link"><img src="./icons/phone-icon.svg" alt="phone" class="icon"><a href="tel:+3363734289" class="link">
+                    <span class="fr">Appelez-moi au</span>
+                    <span class="en dn">Give me call</span> +33637334289</a></li>
             </ul>
         </section>
     </main>

@@ -133,19 +133,23 @@ hr{
 /* ********* FONTS ******** */
 
 body{
-    font-family: 'NTR', sans-serif;
+    /* font-family: 'NTR', sans-serif; */
+    font-family: 'Varela Round', sans-serif;
 }
-body,
-.about-title,
-.skillset-title,
-.carousel-control button{
-    font-size: 18px;
+body, .see-pj-link{
+    font-size: 0.95em;
+    line-height: 35px;
 }
+
+.skillset-title span,
+.carousel-control span,
+.about-title span,
 .name{
-    font-size: 20px;
+    font-size: 1.1rem;
 }
+
 .menu{
-    font-size: 25px;
+    font-size: 1.4rem;
 }
 h1{
     font-family: 'Cutive Mono', monospace;
@@ -158,7 +162,8 @@ h1{
 .about-title,
 .skillset-title,
 .carousel-control,
-.carousel-control button{
+.carousel-control button,
+.switchLanguage button{
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 1px;
 }
@@ -189,6 +194,36 @@ body{
     height: 100vh;
     padding: 90px 0 0 180px;
 }
+
+.switchLanguage{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-align: center;
+    border-radius: 50%;
+    color: #222;
+}
+.switchLanguage.s-screen{
+    right: 30px;
+}
+.switchLanguage button{
+    line-height: 30px;
+    width: 30px;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 4px;
+    color: #222;
+    opacity: 0.5;
+}
+.switchLanguage .active{
+    background: #ff00ff13;
+    color: magenta;
+    opacity: 1;
+}
+
+.s-screen{
+    display: none;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -209,7 +244,7 @@ header{
     border-radius: 30px;
     background-color: #e600e5;
     margin: 3px 0;
-    transition: all 0.2s linear;
+    transition: all 0.25s linear;
 }
 
 
@@ -238,7 +273,7 @@ header{
     display: none;
     z-index: 20;
     margin-right: 50px;
-    transition: all 0.2s linear;
+    transition: all 0.25s linear;
     width: 44px;
     height: 44px;
     align-items: flex-start ;
@@ -256,7 +291,7 @@ header{
     left: 1050px;
     transform: translateY(-50%);
     z-index: 10;
-    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .menu-link{
@@ -267,6 +302,9 @@ header{
 
 #home{
     opacity: 0;
+}
+.dn{
+    display: none;
 }
 
 .menu-link:nth-of-type(1){
@@ -325,7 +363,7 @@ section:nth-child(2){
 }
 
 section:nth-child(1){
-    height: 500px;
+    height: 520px;
     overflow: hidden;
     justify-content: space-between;
 }
@@ -339,7 +377,7 @@ section:nth-child(1){
 .carousel-container{
     display: flex;
     width: fit-content;
-    transition: all 0.3s linear;
+    transition: all 0.25s linear;
 }
 .carousel-img{
     width: 700px;
@@ -380,7 +418,6 @@ section:nth-child(1){
     border-radius: 30px;
     color: white;
     border: 1px solid white;
-    font-size: 20px;
     transition: all 0.2s linear;
 }
 .see-pj-link:hover{
@@ -480,8 +517,21 @@ section.content{
         display: flex;
         align-items: center;
         justify-content: end;
+        background: -moz-linear-gradient(180deg, #eff0f2, #E0E1E3);
+        background: -webkit-linear-gradient(180deg, #eff0f2, #E0E1E3);
+        background: -o-linear-gradient(180deg, #eff0f2, #E0E1E3);
         background: linear-gradient(180deg, #eff0f2, #E0E1E3);
         transform: translateX(100%);
+    }
+
+    #work{
+        height: 500px;
+    }
+    section{
+        width: 700px;
+    }
+    .carousel-img{
+        width: 640px;
     }
     .menu-link{
         text-align: right;
@@ -489,17 +539,25 @@ section.content{
     .visible{
         transform: translateX(0);
     }
-
+    .w-screen{
+        display: none;
+    }
+    .s-screen{
+        display: block;
+    }
 }
 @media screen and (max-width : 900px){
     body{
         padding: 50px 0 0 50px;
         background-image: unset;
-        background: #EFF0F2;
+        background: #E6E7E9;
     }
     .name{
         margin-bottom: 80px;
     }
+    /* #work{
+        height: unset;
+    } */
 }
 @media screen and (max-width : 760px){
     section{
@@ -515,7 +573,7 @@ section.content{
         width: 850px;
     }
     #work{
-        height: 550px;
+        height: 570px;
     }
     .carousel-img{
         width: 790px;

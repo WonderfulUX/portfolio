@@ -21,6 +21,8 @@ const menu = document.querySelector('.menu');
 const topLine = document.querySelector('.top');
 const middleLine = document.querySelector('.middle');
 const bottomLine = document.querySelector('.bottom');
+let menuLinkArray = ['work','skillset','about','contact','projets','compétences','à propos','contact'];
+let menuLinkPos;
 
 //RESIZING
 let resize850= false;
@@ -79,10 +81,12 @@ function resetPage(){
     displayHome();
 }
 function displayHome(){
+    //smooth h1 display
     homeTitle.style.display ='block';
     homeTitle.classList.add('reveal');
 }
 function hideHome(){
+    //smooth h1 hide
     homeTitle.style.display ='none';
     homeTitle.classList.remove('reveal');
 }
@@ -93,10 +97,12 @@ function displaySection(event){
     removeHighlightLink();
     resetAllSection();
     hideHome();
-    event.target.classList.add('active-link');
     let activeSection = event.target.innerText.toLowerCase();
-    activeSection ==='work' ||  activeSection ==='skillset'? document.getElementById(activeSection).style.display= 'flex': document.getElementById(activeSection).style.display= 'block';
-    document.getElementById(activeSection).classList.add('reveal');
+    menuLinkPos = menuLinkArray.indexOf(activeSection)%4;
+    menuItem[menuLinkPos].classList.add('active-link');
+    let sectionDisplay = document.querySelectorAll('section')[menuLinkPos];
+    menuLinkPos<2 ? sectionDisplay.style.display = 'flex': sectionDisplay.style.display = 'block';
+    document.querySelectorAll('section')[menuLinkPos].classList.add('reveal');
     toggleMenu();
 }
 
@@ -147,6 +153,7 @@ function getCarouselWidth(){
 }
 
 function updateHr(value){
+    //color carousel control line depending on project
     switch (value){
         
         case 2 :
@@ -170,5 +177,27 @@ function updateHr(value){
         default :
                 hr.classList = "";
                 slideName.innerText = 'Veggie Burger';
+    }
+}
+
+
+function switchLang(ele){
+    //switch FR to EN and vice versa
+    let frElements = document.querySelectorAll('.fr');
+    let enElements = document.querySelectorAll('.en');
+    let frBtn = document.querySelectorAll('.switchFr');
+    let enBtn = document.querySelectorAll('.switchEn');
+    let toBeDisplayed = document.querySelectorAll('.dn');
+
+    toBeDisplayed.forEach(ele=>{ ele.classList.remove('dn');});
+    if(ele.target.innerText=='en'){
+        frElements.forEach(ele=>{ ele.classList.add('dn')});
+        frBtn.forEach(ele=>{ ele.classList.remove('active')});
+        enBtn.forEach(ele=>{ ele.classList.add('active')});
+    }
+    else{
+        enElements.forEach(ele=>{ele.classList.add('dn');});
+        frBtn.forEach(ele=>{ ele.classList.add('active')});
+        enBtn.forEach(ele=>{ ele.classList.remove('active')});
     }
 }
