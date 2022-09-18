@@ -206,6 +206,7 @@ body{
 }
 .switchLanguage.s-screen{
     right: 30px;
+    bottom: 80px;
 }
 .switchLanguage button{
     line-height: 30px;
