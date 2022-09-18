@@ -9,7 +9,7 @@ let carouselSpan, translationValue, slideNumber, windowWidth;
 //SLIDES CONTROLS
 const nextBtn = document.querySelector('.next');
 const previousBtn = document.querySelector('.previous');
-let hr = document.getElementsByTagName('hr')[0];
+let hr = document.querySelector('.carousel-control hr');
 
 //NAVIGATION
 const homeTitle = document.getElementById('home');
